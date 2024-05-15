@@ -5,7 +5,7 @@
 
 package com.peel.react;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
 import android.util.Base64;
 
 import com.facebook.common.logging.FLog;
@@ -102,7 +102,7 @@ public final class TcpSockets extends ReactContextBaseJavaModule implements TcpS
     }
 
     @ReactMethod
-    public void connect(final Integer cId, final @Nullable String host, final Integer port, final ReadableMap options) {
+    public void connect(final Integer cId, final @NonNull String host, final Integer port, final ReadableMap options) {
         new GuardedAsyncTask<Void, Void>(getReactApplicationContext()) {
             @Override
             protected void doInBackgroundGuarded(Void... params) {

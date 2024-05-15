@@ -1,6 +1,6 @@
 package com.peel.react;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
 import android.util.SparseArray;
 
 import com.koushikdutta.async.AsyncNetworkSocket;
@@ -119,7 +119,7 @@ public final class TcpSocketManager {
         });
     }
 
-    public void connect(final Integer cId, final @Nullable String host, final Integer port) throws UnknownHostException, IOException {
+    public void connect(final Integer cId, final @NonNull String host, final Integer port) throws UnknownHostException, IOException {
         // resolve the address
         final InetSocketAddress socketAddress;
         if (host != null) {
